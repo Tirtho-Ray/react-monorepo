@@ -2,7 +2,7 @@
   "name": "reusablerepo",
   "version": "1.0.0",
   "private": false,
-  "packageManager": "10.28.2",
+  "packageManager": "pnpm@10.28.2",
   "scripts": {
     "dev":"lerna run dev --parallel",
     "build":"lerna run build",
