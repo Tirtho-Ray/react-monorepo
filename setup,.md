@@ -1,0 +1,4 @@
+--first initial -> npm init -y 
+-> change pkg.json
+-> write pnpm-workspace.yaml file
+-> install lerna -> then pnpm lerna init
