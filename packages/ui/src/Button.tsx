@@ -1,9 +1,27 @@
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 import styles from "./Button.module.css";
 
-export const Button = ({ onClick }: { onClick: () => void }) => {
+type ButtonVariant = "primary" | "secondary" | "ghost";
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children?: ReactNode;
+  variant?: ButtonVariant;
+};
+
+export const Button = ({
+  children = "Run action",
+  variant = "primary",
+  className = "",
+  type = "button",
+  ...props
+}: ButtonProps) => {
   return (
-    <button className={styles.btn} onClick={onClick}>
-      Shared Button
+    <button
+      type={type}
+      className={[styles.btn, styles[variant], className].filter(Boolean).join(" ")}
+      {...props}
+    >
+      {children}
     </button>
   );
 };
