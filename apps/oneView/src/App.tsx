@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Button } from '@repo/ui'
+import { formatCurrency } from '@repo/utils'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -18,16 +20,13 @@ function App() {
         <div>
           <h1>Get started</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            Shared utility output: <code>{formatCurrency(1250 + count)}</code>
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        <div className="counter">
+          <span>Count is {count}</span>
+          <Button onClick={() => setCount((count) => count + 1)} />
+        </div>
       </section>
 
       <div className="ticks"></div>
