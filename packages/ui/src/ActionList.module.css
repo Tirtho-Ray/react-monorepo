@@ -1,0 +1,40 @@
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+  background: #ffffff;
+  text-align: left;
+}
+
+.item strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.item p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-top: 3px;
+}
+
+.done { background: #22c55e; }
+.active { background: #0ea5e9; }
+.queued { background: #f59e0b; }

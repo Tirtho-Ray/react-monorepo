@@ -1,5 +1,5 @@
 packages:
-  -"apps/*"
-  -"packages/*"
+  - "apps/*"
+  - "packages/*"
 
   # we manage indivisible level but now we use it global refer 

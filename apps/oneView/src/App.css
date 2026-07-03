@@ -1,0 +1,162 @@
+.workspace {
+  width: min(1120px, 100%);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 32px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 22px;
+  text-align: left;
+}
+
+.heroPanel {
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: stretch;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 92% 18%, rgba(14, 165, 233, 0.16), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eefaf1 100%);
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.heroCopy h1 {
+  max-width: 620px;
+  margin: 18px 0 14px;
+  color: #0f172a;
+  font-size: 48px;
+  line-height: 1.02;
+  font-weight: 850;
+}
+
+.heroCopy p {
+  max-width: 610px;
+  color: #475569;
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.progressPanel {
+  align-self: center;
+  min-height: 230px;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.progressPanel span {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.progressPanel strong {
+  margin-top: 10px;
+  color: #0f172a;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.meter {
+  height: 10px;
+  margin-top: 22px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0ea5e9, #22c55e);
+  transition: width 180ms ease;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 16px;
+}
+
+.panel {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+.highlight {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.highlight p {
+  margin: 0 0 22px;
+  color: #7c2d12;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+@media (max-width: 860px) {
+  .workspace {
+    padding: 18px;
+  }
+
+  .heroPanel,
+  .statsGrid,
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroPanel {
+    padding: 22px;
+  }
+
+  .heroCopy h1 {
+    font-size: 36px;
+  }
+
+  .progressPanel strong {
+    font-size: 44px;
+  }
+}
