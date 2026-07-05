@@ -1,0 +1,12 @@
+services:
+  oneview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_NAME: oneview
+        APP_DIR: apps/oneView
+    image: reusable-repo-oneview:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
