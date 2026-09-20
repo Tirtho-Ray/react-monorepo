@@ -4,10 +4,10 @@
   "private": false,
   "packageManager": "pnpm@10.28.2",
   "scripts": {
-    "dev":"lerna run dev --parallel",
-    "build":"lerna run build",
-    "test":"lerna run test",
-    "lint":"lerna run lint"
+    "dev": "node api.js && lerna run dev --parallel",
+    "build": "node api.js && lerna run build",
+    "test": "lerna run test",
+    "lint": "lerna run lint"
   },
   "license": "ISC",
   "devDependencies": {
